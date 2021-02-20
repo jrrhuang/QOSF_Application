@@ -1,5 +1,6 @@
 """
 Jerry Huang Task 3.
+Implements single qubit gates and CNOT.
 """
 
 import numpy as np
