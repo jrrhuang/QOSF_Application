@@ -1,6 +1,6 @@
 """
 Jerry Huang Task 3.
-Version 2 implements everything in version 1 in addition to universal
+Version 2 implements everything in version 1 in addition to the universal
 operator function.
 """
 
