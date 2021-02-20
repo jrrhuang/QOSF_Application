@@ -8,7 +8,7 @@ that we measure. The odds of observing a specific classical state is the square 
 obtain information about the quantum state.<br/>
 We can manipulate the states of qubits through the use of quantum gates, represented mathematically by a matrix operator. Our simulator will use a circuit
 (consisting of several gates) to manipulate qubits given in the ground state and give a measurement of the final state. Because the classical outcome of the final
-state is determined probabilistically, the simulator randomly selects the outcome based on a probabilty distribution obtained from the final state vector. It
+state is determined probabilistically, the frequency of the outcome will reflect the probabilty distribution obtained from the final state vector. The simulator
 performs this measurement many times in order to print a distribution of outcomes, reflective of the probabilities from the final state vector. So although we 
 are unable to directly observe the quantum states, we can approximate the amplitudes corresponding to the results from this distribution by reverse calculation.
 <br/>
