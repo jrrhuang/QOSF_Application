@@ -12,4 +12,8 @@ state is determined probabilistically, the simulator randomly selects the outcom
 performs this measurement many times in order to print a distribution of outcomes, reflective of the probabilities from the final state vector. So although we 
 are unable to directly observe the quantum states, we can approximate the amplitudes corresponding the results from this distribution.<br/>
 
-- 
+## Completed
+- quantum simulator performing multi-shot measurement using weighted random<br/>
+- parametric gates<br/>
+- global parameters for variational algorithms
+- universal operator function
