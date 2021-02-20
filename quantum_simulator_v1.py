@@ -1,7 +1,8 @@
 """
 Jerry Huang Task 3.
-This program implements a basic quantum simulator. Version 1 is able to implement
-single qubit gates and CNOT. It allows for parametric gates and global parameters as well.
+This program implements a basic quantum simulator. Version 1 is able
+to implement single qubit gates and CNOT. It allows for parametric gates
+and global parameters as well.
 """
 
 import numpy as np
@@ -23,8 +24,8 @@ gate_dict = {
 
 def get_ground_state(num_qubits):
     """
-    Return ground state vector of size 2**(num_qubits) with all zeroes except first element
-    which is 1.
+    Return ground state vector of size 2**(num_qubits) with all zeroes
+    except first element which is 1.
 
     :param num_qubits:
         int number of qubits
