@@ -1,7 +1,7 @@
 """
 Jerry Huang Task 3.
-Implements single qubit gates and CNOT; allows parametric gates and
-global parameters.
+Version 1 is able to implement single qubit gates and CNOT, and it allows for
+parametric gates and global parameters as well.
 """
 
 import numpy as np
@@ -23,7 +23,7 @@ gate_dict = {
 
 def get_ground_state(num_qubits):
     """
-    Return vector of size 2**(num_qubits) with all zeroes except first element
+    Return ground state vector of size 2**(num_qubits) with all zeroes except first element
     which is 1.
 
     :param num_qubits:
@@ -38,7 +38,7 @@ def get_ground_state(num_qubits):
 
 def get_operator(total_qubits, gate_unitary, target_qubits):
     """
-    Return unitary operator for given operator and target qubits.
+    Return unitary matrix operator for given operator and target qubits.
 
     :param dim:
         int dimensions of state_vector in the form of 2**n
@@ -173,8 +173,8 @@ def next_idx(s):
 
 def get_counts(state_vector, num_shots):
     """
-    Loop num_shots times, select index according to weighted random, and return
-    statistic of result.
+    Perform multi-shot measurement using weighted random. Loop num_shots times,
+    select index, and return statistic of result.
 
     :param state_vector:
         numpy array with final state vector

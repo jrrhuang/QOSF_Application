@@ -1,6 +1,7 @@
 """
 Jerry Huang Task 3.
-I tried to implement universal operator in this version. Might be buggy...
+Version 2 implements everything in version 1 in addition to universal
+operator function.
 """
 
 import numpy as np
@@ -56,7 +57,8 @@ def get_operator(dim, gate_unitary_lst, target_qubits):
 
     O = np.zeros([dim, dim])
 
-    # keep track of all projection combinations
+    # keep track of all projection combinations according to binary digits
+
     curr = ""
     for c in gate_unitary_lst:
         if c == "c":
