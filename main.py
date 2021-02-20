@@ -2,7 +2,7 @@
 Run our quantum simulator.
 """
 
-from assessment_task_3_v1 import *
+from quantum_simulator_v1 import *
 
 # List of gates in the circuit
 
