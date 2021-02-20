@@ -16,4 +16,4 @@ are unable to directly observe the quantum states, we can approximate the amplit
 - quantum simulator performing multi-shot measurement using weighted random<br/>
 - parametric gates<br/>
 - global parameters for variational algorithms
-- universal operator function
+- universal operator function (V2)
