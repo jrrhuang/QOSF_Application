@@ -13,7 +13,7 @@ def objective_function(params):
 
     counts = get_counts(final_state, 1000)
 
-    # calculate cost
+    # simple cost function
     cost = 0
     if "000" in counts:
         cost += counts["000"]
