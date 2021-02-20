@@ -1,7 +1,9 @@
 """
 Jerry Huang Task 3.
 Version 2 implements everything in version 1 in addition to the universal
-operator function.
+operator function. I wrote this code using a different approach that
+accounts for all combinations of projections depending on the number
+of control gates. It is a more general version of v1.
 """
 
 import numpy as np
@@ -38,8 +40,9 @@ def get_ground_state(num_qubits):
 
 def get_operator(dim, gate_unitary_lst, target_qubits):
     """
-    Return unitary operator for given operator (including universal operators)
-    and target qubits.
+    Return unitary matrix operator for given operator and target qubits.
+    Adjusts the dimension of the input gate to fit the number of qubits
+    in our simulator.
 
     :param dim:
         int dimensions of state_vector in the form of 2**n
@@ -110,7 +113,8 @@ def choice(c):
 def run_program(initial_state, program, par={}):
     """
     Read program, extract matrix operator for each gate, and obtain the
-    final state by multiplying state vector with operator.
+    final state by multiplying state vector with operator. This simulates
+    a quantum circuit acting on the given quantum states.
 
     :param initial_state:
         numpy array denoting ground state vector
@@ -164,7 +168,9 @@ def get_unitary(spec, par, gate):
 
 def measure_all(state_vector):
     """
-    Choose element from state_vector using weighted random.
+    Choose element from state_vector using weighted random, based on
+    probabilities determined from amplitudes. This simulates obtaining
+    a classical measurement from a quantum state.
 
     :param state_vector:
         numpy array representing state vector containing amplitudes as entries
@@ -201,7 +207,7 @@ def next_bin(s):
 def get_counts(state_vector, num_shots):
     """
     Perform multi-shot measurement using weighted random. Loop num_shots times,
-    store the index, and return a statistic of the result.
+    store the index, and return a distribution of the results.
 
     :param state_vector:
         numpy array with final state vector

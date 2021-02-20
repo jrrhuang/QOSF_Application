@@ -1,6 +1,9 @@
 """
-We can run a variational algorithm by allowing global parameters and print parameters that
-minimize the cost function.
+We explore running a variational algorithm by allowing global parameters
+and obtain parameters, theta and phi, that minimize the cost function
+by using Powell's method.
+Are the ideas here (e.g. finding global minimum, gradient descent) similar to
+those in quantum annealing?
 """
 
 from quantum_simulator_v1 import *
@@ -31,7 +34,7 @@ def objective_function(params):
 
 params = np.array([3.1415, 1.5708])
 
-# minimize
+# minimize according to Powell's method
 
 minimum = optimize.minimize(objective_function, params, method="Powell", tol=1e-6)
 

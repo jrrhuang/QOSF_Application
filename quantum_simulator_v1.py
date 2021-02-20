@@ -1,8 +1,9 @@
 """
 Jerry Huang Task 3.
 This program implements a basic quantum simulator. Version 1 is able
-to implement single qubit gates and CNOT. It allows for parametric gates
-and global parameters as well.
+to implement single qubit gates and CNOT (required) It allows parametric input
+to be used for U3 gate and global parameter for use in variational
+algorithms.
 """
 
 import numpy as np
@@ -40,6 +41,8 @@ def get_ground_state(num_qubits):
 def get_operator(total_qubits, gate_unitary, target_qubits):
     """
     Return unitary matrix operator for given operator and target qubits.
+    Adjusts the dimensions of the input gate to fit the number of qubits
+    in our simulator.
 
     :param total_qubits:
         int number of qubits in state vector
@@ -98,7 +101,8 @@ def get_operator(total_qubits, gate_unitary, target_qubits):
 def run_program(initial_state, program, par={}):
     """
     Read program, extract matrix operator for each gate, and obtain the
-    final state by multiplying state vector with operator.
+    final state by multiplying state vector with operator. This simulates
+    a quantum circuit acting on the given quantum states.
 
     :param initial_state:
         numpy array denoting ground state vector
@@ -145,7 +149,9 @@ def get_unitary(spec, par):
 
 def measure_all(state_vector):
     """
-    Choose element from state_vector using weighted random.
+    Choose element from state_vector using weighted random, based on
+    probabilities determined from amplitudes. This simulates obtaining
+    a classical measurement from a quantum state.
 
     :param state_vector:
         numpy array representing state vector containing amplitudes as entries
@@ -182,7 +188,7 @@ def next_idx(s):
 def get_counts(state_vector, num_shots):
     """
     Perform multi-shot measurement using weighted random. Loop num_shots times,
-    store the index, and return a statistic of the result.
+    store the index, and return a distribution of the results.
 
     :param state_vector:
         numpy array with final state vector
