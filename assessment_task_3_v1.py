@@ -1,7 +1,7 @@
 """
 Jerry Huang Task 3.
-Version 1 is able to implement single qubit gates and CNOT, and it allows for
-parametric gates and global parameters as well.
+This program implements a basic quantum simulator. Version 1 is able to implement
+single qubit gates and CNOT. It allows for parametric gates and global parameters as well.
 """
 
 import numpy as np
@@ -40,14 +40,14 @@ def get_operator(total_qubits, gate_unitary, target_qubits):
     """
     Return unitary matrix operator for given operator and target qubits.
 
-    :param dim:
-        int dimensions of state_vector in the form of 2**n
-    :param gate_unitary_lst:
-        list of control and unitary gates in operator
+    :param total_qubits:
+        int number of qubits in state vector
+    :param gate_unitary:
+        unitary matrix representing a gate in the circuit
     :param target_qubits:
         list of control and gate indices
     :return:
-        numpy array denoting unitary operator of size dim x dim
+        numpy array denoting adjusted unitary operator
     """
 
     I = np.identity(2)
