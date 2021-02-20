@@ -3,7 +3,7 @@ We can run a variational algorithm by allowing global parameters and print param
 minimize the cost function.
 """
 
-from assessment_task_v1 import *
+from quantum_simulator_v1 import *
 from scipy import optimize
 
 my_qpu = get_ground_state(3)
