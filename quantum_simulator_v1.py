@@ -41,7 +41,7 @@ def get_ground_state(num_qubits):
 def get_operator(total_qubits, gate_unitary, target_qubits):
     """
     Return unitary matrix operator for given operator and target qubits.
-    Adjusts the dimensions of the input gate to fit the number of qubits
+    Adjust the dimensions of the input gate to fit the number of qubits
     in our simulator.
 
     :param total_qubits:
