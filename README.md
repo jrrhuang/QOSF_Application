@@ -6,7 +6,7 @@ of the basis states. Quantum states are not directly observable, so they will co
 This classical state is determined probabilistically as the square of the magnitude of the amplitude for a given state. We will see that this feature, in fact, 
 allows us to determine information about the quantum state.<br/>
 We can manipulate the states of qubits through the use of quantum gates, represented mathematically by a matrix operator. Our simulator will use a circuit
-(consisting of several gates) to manipulate qubits given in ground state and give a measurement of the final state. Because the classical measurement of the final
+(consisting of several gates) to manipulate qubits given in ground state and give a measurement of the final state. Because the classical outcome of the final
 state is determined probabilistically, the simulator randomly selects the outcome based on a probabilty distribution obtained from the final state vector. It
 performs this measurement many times in order to print a distribution of outcomes, reflective of the probabilities from the final state vector. So although we 
 are unable to directly observe the quantum states, we can infer the amplitudes of the quantum states from this distribution.
