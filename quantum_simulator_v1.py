@@ -54,7 +54,7 @@ def get_operator(total_qubits, gate_unitary, target_qubits):
     I = np.identity(2)
     O = []
 
-    # single qubit gates
+    # create operator for single qubit gates
 
     if len(target_qubits) == 1:
         for i in range(total_qubits):
@@ -69,7 +69,7 @@ def get_operator(total_qubits, gate_unitary, target_qubits):
                 else:
                     O = np.kron(O, I)
 
-    # CNOT
+    # create operator for CNOT
 
     P0x0 = np.array([[1, 0], [0, 0]])
     P1x1 = np.array([[0, 0], [0, 1]])
