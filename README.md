@@ -3,14 +3,15 @@
 
 ## Summary
 The goal of the task is to implement a basic quantum circuit simulator using code. Quantum superposition can be represented as state vectors, with entries denoting 
-amplitudes of the basis states. Quantum states are not directly observable, so they will collapse to a classical state upon measurement, which is the outcome that 
-we measure. This classical state is determined probabilistically as the square of the magnitude of the amplitude for a given state. This feature allows us to obtain 
-information about the quantum state.<br/>
+amplitudes of the basis states. These quantum states are not directly observable as they will collapse to a classical state upon measurement, which is the outcome 
+that we measure. The odds of observing a specific classical state is the square of the magnitude of the amplitude for a given state. This feature allows us to 
+obtain information about the quantum state.<br/>
 We can manipulate the states of qubits through the use of quantum gates, represented mathematically by a matrix operator. Our simulator will use a circuit
 (consisting of several gates) to manipulate qubits given in the ground state and give a measurement of the final state. Because the classical outcome of the final
 state is determined probabilistically, the simulator randomly selects the outcome based on a probabilty distribution obtained from the final state vector. It
 performs this measurement many times in order to print a distribution of outcomes, reflective of the probabilities from the final state vector. So although we 
-are unable to directly observe the quantum states, we can approximate the amplitudes corresponding to the results from this distribution.<br/>
+are unable to directly observe the quantum states, we can approximate the amplitudes corresponding to the results from this distribution by reverse calculation.
+<br/>
 
 ## Completed
 - quantum simulator performing multi-shot measurement using weighted random<br/>
