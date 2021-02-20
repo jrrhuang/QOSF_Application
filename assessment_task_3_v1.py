@@ -1,6 +1,7 @@
 """
 Jerry Huang Task 3.
-Implements single qubit gates and CNOT.
+Implements single qubit gates and CNOT; allows parametric gates and
+global parameters.
 """
 
 import numpy as np
