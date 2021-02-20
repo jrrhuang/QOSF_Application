@@ -163,7 +163,14 @@ def get_unitary(spec, par, gate):
 
 
 def measure_all(state_vector):
-    """Choose element from state_vector using weighted random."""
+    """
+    Choose element from state_vector using weighted random.
+
+    :param state_vector:
+        numpy array representing state vector containing amplitudes as entries
+    :return:
+        binary index
+    """
 
     prob = []
     idx = ["0" * int(np.log2(len(state_vector)))]
@@ -193,8 +200,8 @@ def next_bin(s):
 
 def get_counts(state_vector, num_shots):
     """
-    Loop num_shots times, select index according to weighted random, and return
-    statistic of result.
+    Perform multi-shot measurement using weighted random. Loop num_shots times,
+    select index, and return statistic of result.
 
     :param state_vector:
         numpy array with final state vector

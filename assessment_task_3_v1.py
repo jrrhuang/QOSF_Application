@@ -143,7 +143,14 @@ def get_unitary(spec, par):
 
 
 def measure_all(state_vector):
-    """Choose element from state_vector using weighted random."""
+    """
+    Choose element from state_vector using weighted random.
+
+    :param state_vector:
+        numpy array representing state vector containing amplitudes as entries
+    :return:
+        binary index
+    """
 
     prob = []
     idx = ["0" * int(np.log2(len(state_vector)))]
