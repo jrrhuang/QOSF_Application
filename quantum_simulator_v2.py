@@ -109,13 +109,13 @@ def choice(c):
 
 def run_program(initial_state, program, par={}):
     """
-    Read program, extract matrix operator for each gate, and obtain
+    Read program, extract matrix operator for each gate, and obtain the
     final state by multiplying state vector with operator.
 
     :param initial_state:
         numpy array denoting ground state vector
-    :param
-        program: list of specifications for gates
+    :param program:
+        list of specifications for gates
     :param par:
         (optional) parameters for variational algorithms
     :return:
@@ -184,7 +184,7 @@ def measure_all(state_vector):
 
 
 def next_bin(s):
-    """Return string representing next binary index."""
+    """Return string representing the next binary index."""
 
     b_lst = list(s[::-1])
 
@@ -201,7 +201,7 @@ def next_bin(s):
 def get_counts(state_vector, num_shots):
     """
     Perform multi-shot measurement using weighted random. Loop num_shots times,
-    select index, and return statistic of result.
+    store the index, and return a statistic of the result.
 
     :param state_vector:
         numpy array with final state vector
