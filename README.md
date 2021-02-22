@@ -10,7 +10,7 @@ We can manipulate the states of qubits through the use of quantum gates, represe
 (consisting of several gates) to manipulate qubits given in the ground state and give a measurement of the final state. Because the classical outcome of the final
 state is determined probabilistically, the frequency of the outcome will reflect the probabilty distribution obtained from the final state vector. The simulator
 performs this measurement many times in order to print a distribution of outcomes, reflective of the probabilities from the final state vector. So although we 
-are unable to directly observe the quantum states, we can approximate the amplitudes corresponding to the results from this distribution by reverse calculation.
+are unable to directly observe the quantum states, we can approximate the magnitudes of the amplitudes corresponding to the results from this distribution by reverse calculation.
 <br/>
 
 ## Completed
