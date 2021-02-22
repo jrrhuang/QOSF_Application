@@ -18,3 +18,9 @@ are unable to directly observe the quantum states, we can approximate the magnit
 - parametric gates<br/>
 - global parameters for variational algorithms
 - universal operator function (V2)
+
+## Usage
+To run the simulator:
+```
+python main.py
+```
